@@ -1,3 +1,6 @@
+import random
+
+
 class Animal(object):
     """Animal class"""
 
@@ -24,6 +27,7 @@ class Pet(Animal):
         super(Pet, self).__init__(voice)
         self.owner = owner
         self.name = name
+        self.health = random.randint(80, 100)
 
     def shout(self):
         """Shout with their voice"""
