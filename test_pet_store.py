@@ -10,25 +10,24 @@ class TestPetStore(unittest.TestCase):
         pass
 
     def test_cat(self):
-        lily = Cat()
+        lily = Cat('Peter', 'Lily')
         lily.shout()
 
     def test_dog(self):
-        sam = Dog()
+        sam = Dog('Peter', 'Sam')
         sam.shout()
 
     def test_pet_store(self):
         store = PetStore()
-        lily = Cat()
+        lily = Cat('Peter', 'Lily')
         store.put_pet(lily)
-        sam = Dog()
+        sam = Dog('Peter', 'Sam')
         store.put_pet(sam)
         jim = Horse()
         # There is a note in PyCharm showing a type error
         # But you can run this code without errors
         store.put_pet(jim)
-        for pet in store.cages:
-            pet.shout()
+        store.pets_party()
 
 
 if __name__ == '__main__':
