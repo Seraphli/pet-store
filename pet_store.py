@@ -64,7 +64,8 @@ def main():
                 store.put_pet(p)
     else:
         for idx, pet in enumerate(store.get_pet(owner)):
-            print('{:>3}. {} {}'.format(idx + 1, pet.__class__.__name__, pet.name))
+            print('{:>3}. {}: {:>6}, Health: {}'.format(idx + 1, pet.__class__.__name__,
+                                                        pet.name, pet.health))
     store.save_state()
 
 
